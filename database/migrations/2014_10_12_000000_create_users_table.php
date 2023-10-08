@@ -15,8 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->boolean('is_admin')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('phone')->default('123456789');
+            $table->string('address')->default('Keamari');
+            $table->string('city')->default('New York');
+            $table->string('state')->default('New York');
+            $table->string('zip_code')->default('12345');
+            $table->string('country')->default('USA');
             $table->rememberToken();
             $table->timestamps();
         });
