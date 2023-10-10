@@ -4,7 +4,14 @@
 
 @section('css')
     <!-- Slick -->
-    <link rel="stylesheet" href="{{ url("libs/slick/slick.css") }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('libs/slick/slick.css') }}" type="text/css">
+    <style>
+        .statistics > .stats{
+            text-align: center;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+    </style>
 @endsection
 
 @section('header-action-button')
@@ -18,33 +25,104 @@
 
 @section('content')
     <!-- Page title -->
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+    <div class="mb-4">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-globe2 small me-2"></i> Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
     </div>
+    {{-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+    </div> --}}
 
     <!-- Cards with key information -->
     <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Total Orders</h5>
-                    <p class="card-text">1234</p>
+        <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-lg-row flex-md-column">
+            <div class="my-3 mx-2 w-100">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Earning</h5>
+                        <p class="card-text">$1000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 mx-2 w-100">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Driver Earning</h5>
+                        <p class="card-text">$1000</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-lg-8 col-md-7 col-sm-12 my-3">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title">Pending Orders</h5>
-                    <p class="card-text">567</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Completed Orders</h5>
-                    <p class="card-text">667</p>
+                    <h5 class="card-title">Statistics</h5>
+                    <div class="row statistics">
+                        <div class="col-lg-3 col-md-6 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-md-column">
+                                <div class="avatar avatar-primary me-lg-2 mx-md-auto my-2">
+                                    <span class="avatar-text rounded-circle">
+                                        <i class="bi bi-minecart-loaded"></i>
+                                    </span>
+                                </div>
+                                <div class="card-columns me-2">
+                                    <h5 class="mb-0">1234</h5>
+                                    <p class="mb-0">Total Loads</p>
+                                    <a href="#"><i class="bi bi-eye"></i> View More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-md-column">
+                                <div class="avatar avatar-info me-lg-2 mx-md-auto my-2">
+                                    <span class="avatar-text rounded-circle">
+                                        <i class="bi bi-minecart-loaded"></i>
+                                    </span>
+                                </div>
+                                <div class="card-columns me-2">
+                                    <h5 class="mb-0">667</h5>
+                                    <p class="mb-0">Completed Loads</p>
+                                    <a href="#"><i class="bi bi-eye"></i> View More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-md-column">
+                                <div class="avatar avatar-danger me-lg-2 mx-md-auto my-2">
+                                    <span class="avatar-text rounded-circle">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                </div>
+                                <div class="card-columns me-2">
+                                    <h5 class="mb-0">56</h5>
+                                    <p class="mb-0">Total Drivers</p>
+                                    <a href="#"><i class="bi bi-eye"></i> View More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-md-column">
+                                <div class="avatar avatar-success me-lg-2 mx-md-auto my-2">
+                                    <span class="avatar-text rounded-circle">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                </div>
+                                <div class="card-columns me-2">
+                                    <h5 class="mb-0">42</h5>
+                                    <p class="mb-0">Active Drivers</p>
+                                    <a href="#"><i class="bi bi-eye"></i> View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,5 +188,5 @@
             Dispatcher Account</button>
 
         {{-- <a href="#" class="btn btn-primary">Create Dispatcher Account</a> --}}
-    </div> --}}
+    {{-- </div> --}}
 @endsection
