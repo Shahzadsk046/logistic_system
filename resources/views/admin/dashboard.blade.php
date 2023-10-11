@@ -6,12 +6,11 @@
     <!-- Slick -->
     <link rel="stylesheet" href="{{ url('libs/slick/slick.css') }}" type="text/css">
     <style>
-        .statistics > .stats{
+        .statistics>.stats {
             text-align: center;
             padding-left: 0px !important;
             padding-right: 0px !important;
         }
-
     </style>
 @endsection
 
@@ -19,7 +18,8 @@
     {{-- <button class="btn btn-primary btn-icon">
         <i class="bi bi-plus-circle"></i> Create Dispatcher
     </button> --}}
-    <button type="button" class="btn btn-primary btn-icon f-small" data-bs-toggle="modal" data-bs-target="#createDispatcherModal">
+    <button type="button" class="btn btn-primary btn-icon f-small" data-bs-toggle="modal"
+        data-bs-target="#createDispatcherModal">
         <i class="bi bi-plus-circle"></i> Create Dispatcher
     </button>
 @endsection
@@ -128,6 +128,51 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 my-3">
+            <div class="card container-fluid py-3">
+                <div class="card-title">Ongoing Load</div>
+                <div class="row ongoingLoads overflow-auto">
+
+                    <table id="ongoingLoadsTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Load ID</th>
+                                <th>Pickup Date</th>
+                                <th>Pickup</th>
+                                <th>Dropoff</th>
+                                <th>Driver Fare</th>
+                                <th>Driver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>838913618</td>
+                                <td>11 Oct, 2023 12:00</td>
+                                <td>Houston, TX, USA</td>
+                                <td>Hot Springs, AR, USA</td>
+                                <td>$350.00</td>
+                                <td><a href="#">Raicel Franco Cigala Miami,FL</a></td>
+                            </tr>
+                        </tbody>
+                        {{-- <tbody>
+                   <!-- Loop through your ongoing load data and generate rows -->
+                   @foreach ($ongoingLoads as $load)
+                      <tr>
+                         <td>{{ $load->load_id }}</td>
+                         <td>{{ $load->pickup_date }}</td>
+                         <td>{{ $load->dropoff }}</td>
+                         <td>{{ $load->driver_fare }}</td>
+                         <td>{{ $load->driver }}</td>
+                      </tr>
+                   @endforeach
+                </tbody> --}}
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Charts or other data visualizations can go here -->
 
@@ -190,4 +235,12 @@
 
         {{-- <a href="#" class="btn btn-primary">Create Dispatcher Account</a> --}}
     {{-- </div> --}}
+
+@section('script')
+    <script>
+        $(document).ready(function() {
+            $('#ongoingLoadsTable').DataTable();
+        });
+    </script>
+@endsection
 @endsection

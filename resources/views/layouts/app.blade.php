@@ -40,6 +40,9 @@
      
      <!-- Latest compiled and minified CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+     <!-- Datatables CSS -->
+    <link rel="stylesheet" href="libs/datatable/datatables.min.css" type="text/css">
 
     @yield('css')
 
@@ -747,11 +750,15 @@
     <!-- ./ layout-wrapper -->
 
 
+    <!-- Datatables Javascript -->
+    <script src="libs/datatable/datatables.min.js"></script>
     <!-- Latest compiled JavaScript -->
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- Bundle scripts -->
     <script src="{{ url('libs/bundle.js') }}"></script>
+
 
     @yield('script')
     <!-- Main Javascript file -->
