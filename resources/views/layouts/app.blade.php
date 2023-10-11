@@ -50,6 +50,13 @@
         #sidebar .nav {
             border: 2px solid red;
         }
+        @media screen and (max-width: 476px)
+        {
+            .f-small {
+                font-size: 0.7rem;       
+                padding: 7px;
+            }
+        }
     </style>
 
     <!-- Scripts -->

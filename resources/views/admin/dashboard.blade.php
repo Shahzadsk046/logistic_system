@@ -11,6 +11,7 @@
             padding-left: 0px !important;
             padding-right: 0px !important;
         }
+
     </style>
 @endsection
 
@@ -18,7 +19,7 @@
     {{-- <button class="btn btn-primary btn-icon">
         <i class="bi bi-plus-circle"></i> Create Dispatcher
     </button> --}}
-    <button type="button" class="btn btn-primary btn-icon" data-bs-toggle="modal" data-bs-target="#createDispatcherModal">
+    <button type="button" class="btn btn-primary btn-icon f-small" data-bs-toggle="modal" data-bs-target="#createDispatcherModal">
         <i class="bi bi-plus-circle"></i> Create Dispatcher
     </button>
 @endsection
@@ -43,7 +44,7 @@
 
     <!-- Cards with key information -->
     <div class="row">
-        <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-lg-row flex-md-column">
+        <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-lg-row flex-column">
             <div class="my-3 mx-2 w-100">
                 <div class="card h-100">
                     <div class="card-body">
@@ -66,9 +67,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Statistics</h5>
                     <div class="row statistics">
-                        <div class="col-lg-3 col-md-6 py-2 stats">
-                            <div class="stat-box d-flex flex-lg-row flex-md-column">
-                                <div class="avatar avatar-primary me-lg-2 mx-md-auto my-2">
+                        <div class="col-6 col-lg-3 py-2 text-center stats">
+                            <div class="stat-box d-flex flex-lg-row flex-column">
+                                <div class="avatar avatar-primary me-lg-2 mx-auto my-2">
                                     <span class="avatar-text rounded-circle">
                                         <i class="bi bi-minecart-loaded"></i>
                                     </span>
@@ -80,9 +81,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 py-2 stats">
-                            <div class="stat-box d-flex flex-lg-row flex-md-column">
-                                <div class="avatar avatar-info me-lg-2 mx-md-auto my-2">
+                        <div class="col-6 col-lg-3 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-column">
+                                <div class="avatar avatar-info me-lg-2 mx-auto my-2">
                                     <span class="avatar-text rounded-circle">
                                         <i class="bi bi-minecart-loaded"></i>
                                     </span>
@@ -94,9 +95,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 py-2 stats">
-                            <div class="stat-box d-flex flex-lg-row flex-md-column">
-                                <div class="avatar avatar-danger me-lg-2 mx-md-auto my-2">
+                        <div class="col-6 col-lg-3 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-column">
+                                <div class="avatar avatar-danger me-lg-2 mx-auto my-2">
                                     <span class="avatar-text rounded-circle">
                                         <i class="bi bi-person"></i>
                                     </span>
@@ -108,9 +109,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 py-2 stats">
-                            <div class="stat-box d-flex flex-lg-row flex-md-column">
-                                <div class="avatar avatar-success me-lg-2 mx-md-auto my-2">
+                        <div class="col-6 col-lg-3 py-2 stats">
+                            <div class="stat-box d-flex flex-lg-row flex-column">
+                                <div class="avatar avatar-success me-lg-2 mx-auto my-2">
                                     <span class="avatar-text rounded-circle">
                                         <i class="bi bi-person"></i>
                                     </span>
