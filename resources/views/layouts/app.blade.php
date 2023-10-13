@@ -60,6 +60,17 @@
                 padding: 7px;
             }
         }
+
+        #goToTopButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border: none;
+            border-radius: 30%;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
     </style>
 
     <!-- Scripts -->
@@ -746,6 +757,10 @@
         </footer>
         <!-- ./ content-footer -->
 
+        {{-- Go to top Button --}}
+        <button id="goToTopButton" class="bg-primary text-white" onclick="goToTop()"><i class="bi bi-arrow-up"></i></button>
+
+
     </div>
     <!-- ./ layout-wrapper -->
 
@@ -759,6 +774,29 @@
     <!-- Bundle scripts -->
     <script src="{{ url('libs/bundle.js') }}"></script>
 
+    <script>
+        // Function to show or hide the "Go to Top" button
+        function toggleGoToTopButton() {
+            var button = document.getElementById("goToTopButton");
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        }
+
+        // Function to scroll to the top
+        function goToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Use "smooth" for smooth scrolling, or "auto" for instant scrolling
+            });
+        }
+
+        // Attach the toggle function to the window's scroll event
+        window.onscroll = toggleGoToTopButton;
+    </script>
 
     @yield('script')
     <!-- Main Javascript file -->

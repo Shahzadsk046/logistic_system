@@ -21,9 +21,9 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('driver_id')->references('id')->on('drivers')->onDelete('cascade');
-            $table->foreign('license_id')->references('id')->on('driver_license_details')->onDelete('cascade');
-            $table->foreign('insurance_id')->references('id')->on('driver_insurance_details')->onDelete('cascade');
-            $table->foreign('vehicle_id')->references('id')->on('trucks')->onDelete('set null');
+            $table->foreign('license_id')->references('id')->on('driver_license_details');
+            $table->foreign('insurance_id')->references('id')->on('driver_insurance_details');
+            $table->foreign('vehicle_id')->references('id')->on('vehicles');
         });
     }
 
